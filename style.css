@@ -21,6 +21,7 @@ body {
   line-height: 1.5rem;
   margin-right: 50px;
   margin-top: 35px;
+  margin-left: 20px;
 }
 
 .navbar-brand p {
@@ -80,57 +81,44 @@ body {
 }
 
 /* HEADER */
-#header {
-  display: flex;
-  font-family: "Crimson Text", serif;
-  height: 75vh;
-  line-height: 10px;
-  /* margin: auto; */
-  justify-content: center;
-  background: url(img/winery1.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  margin-top: 70px;
-}
-
-#header-heritage {
-  display: flex;
-  font-family: "Crimson Text", serif;
-  height: 75vh;
-  line-height: 10px;
-  /* margin: auto; */
-  justify-content: center;
-  background: url(img/winery-heritage.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  margin-top: 70px;
-}
-
+#header,
+#header-heritage,
 #header-wines {
   display: flex;
   font-family: "Crimson Text", serif;
   height: 75vh;
   line-height: 10px;
-  /* margin: auto; */
   justify-content: center;
+  margin-top: 70px;
+}
+
+#header {
+  background: url(img/winery1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#header-heritage {
+  background: url(img/winery-heritage.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#header-wines {
   background: url(img/winery-wines.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  margin-top: 70px;
 }
 
 #home-introduction {
-  /* font-family: "Crimson Text", serif; */
   align-self: center;
-  /* padding-left: 50px; */
   text-align: center;
-  /* justify-self: center; */
 }
 
 #home-introduction h1 {
@@ -174,62 +162,53 @@ a:hover {
   color: #e8e8fa;
 }
 
+.footer li {
+  cursor: pointer;
+}
+
 input {
   max-width: 400px;
 }
 
-/* .card {
-  text-align: center;
-  min-height: 900px;
-  max-width: 70%;
-} */
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+/* FLIP CARDS */
 .flip-card {
   background-color: transparent;
-  /* width: 300px;
-  height: 200px; */
-  /* border: 5px solid #f1f1f1; */
   perspective: 1000px;
   text-align: center;
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
-  /* width: 100%;
-  height: 100%; */
-  /* text-align: center; */
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .flip-card-front,
 .flip-card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
-/* .flip-card-front {
-  background-color: #bbb;
-  color: black;
-} */
-
-/* Style the back side */
 .flip-card-back {
   background-color: #e8e8fa;
   color: black;
   transform: rotateY(180deg);
+  font-size: 1.2vw;
+}
+
+.price {
+  font-size: 2vw;
+  font-weight: bold;
 }
 
 /* MEDIA QUERIES */
@@ -258,7 +237,7 @@ input {
     margin-top: -1rem;
   }
 }
-/* ============ desktop view .end// ============ */
+/* ============ desktop view end// ============ */
 
 /* ============ mobile view ============ */
 @media (max-width: 991px) {
@@ -314,6 +293,18 @@ input {
 
   .navbar-toggler {
     margin-top: -20px;
+  }
+
+  #wine-list-desktop {
+    display: none;
+  }
+
+  .flip-card-back {
+    font-size: 2.5vw;
+  }
+
+  .price {
+    font-size: 4vw;
   }
 }
 
