@@ -229,7 +229,6 @@ input {
   .navbar .nav-item .dropdown-menu {
     display: none;
   }
-  /* .navbar .nav-item:hover .nav-link{   } */
   .navbar .nav-item:hover .dropdown-menu {
     display: block;
   }
@@ -274,7 +273,6 @@ input {
 
   .list-unstyled li {
     padding: 20px;
-    /* border-right: 1px solid #0c0a0a; */
   }
 
   .navbar-brand {
@@ -308,4 +306,4 @@ input {
   }
 }
 
-/* ============ mobile view .end// ============ */
+/* ============ mobile view end// ============ */
