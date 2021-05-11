@@ -207,14 +207,17 @@ input {
 }
 
 .price {
-  font-size: 2vw;
+  margin-top: 10px;
+  font-size: 3vw;
   font-weight: bold;
 }
 
-.flip-card-back ul li {
-  text-align: center;
-  list-style-position: outside;
-  list-style: none;
+.price-bottle {
+  font-style: italic;
+}
+
+.details-wine p {
+  margin: 0px;
 }
 
 /* MEDIA QUERIES */
@@ -308,13 +311,17 @@ input {
   }
 
   .price {
-    font-size: 4vw;
+    font-size: 6vw;
   }
 }
 
 @media (max-width: 768px) {
   .flip-card-back {
     font-size: 4.5vw;
+  }
+
+  .price {
+    font-size: 8vw;
   }
 }
 
