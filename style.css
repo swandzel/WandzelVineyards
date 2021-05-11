@@ -212,6 +212,8 @@ input {
 }
 
 .flip-card-back ul li {
+  text-align: center;
+  list-style-position: outside;
   list-style: none;
 }
 
