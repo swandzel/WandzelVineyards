@@ -211,6 +211,10 @@ input {
   font-weight: bold;
 }
 
+.flip-card-back ul li {
+  list-style: none;
+}
+
 /* MEDIA QUERIES */
 
 /* ============ desktop view ============ */
@@ -303,6 +307,12 @@ input {
 
   .price {
     font-size: 4vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .flip-card-back {
+    font-size: 4.5vw;
   }
 }
 
